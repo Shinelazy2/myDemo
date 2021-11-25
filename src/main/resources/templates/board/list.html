@@ -50,7 +50,7 @@
 
               <li class="page-item">
                 <!-- <a class="page-link" href="#">1</a> -->
-                  <a class="page-link" href="#" th:each="i : ${#num.sequence(starPage, endPage)}" th:classappend="${i == boards.pageable.pageNumber + 1} ? 'disabled'" th:text="${i}"> 1</a>
+                  <a class="page-link" href="#" th:each="i : ${#num.sequence(startPage, endPage)}" th:classappend="${i == boards.pageable.pageNumber + 1} ? 'disabled'" th:text="${i}"> 1</a>
               </li>
               
               <li class="page-item" ></li>>
