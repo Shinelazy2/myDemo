@@ -33,7 +33,7 @@ public class BoardController {
     @GetMapping("/list")
     public String list(Model model, @PageableDefault(size = 2) Pageable pageable){
         Page<Board> boards = boardRepository.findAll(pageable); // 데이터를 다 가져옴
-        int startPage = Math.max(1, boards.getPageable().getPageNumber() - 4); // 시작 페이지 최소값이 0
+        int startPage = Math.max(1, boards.getPageable().getPageNumber() - 4); // 시작 페이지 최소값이 1
         int endPage = Math.min(boards.getTotalPages(), boards.getPageable().getPageNumber() + 4);
 //        int startPage = 1;
 //        int endPage = boards.getTotalPages();
